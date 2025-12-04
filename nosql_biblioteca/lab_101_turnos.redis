@@ -1,0 +1,5 @@
+# lab_101_turnos.redis - adaptación: reservas en biblioteca (Redis)
+INCR reservation_counter
+LPUSH reservation_queue "{"user":"ana123","isbn":"978-0143127741"}"
+SET hold:user:ana123:978-0143127741 "reserved" EX 900
+ZINCRBY book_popularity 1 "978-0143127741"

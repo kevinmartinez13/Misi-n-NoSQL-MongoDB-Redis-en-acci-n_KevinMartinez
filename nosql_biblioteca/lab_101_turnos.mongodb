@@ -1,0 +1,7 @@
+// lab_101_turnos.mongodb - adaptación: reservas en biblioteca (MongoDB)
+use biblioteca
+
+db.reservations.insertMany([
+  { user: "ana123", isbn: "978-0143127741", requested_at: new Date(), status: "pending" },
+  { user: "juan99", isbn: "978-0307387899", requested_at: new Date(), status: "pending" }
+])
